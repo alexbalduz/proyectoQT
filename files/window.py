@@ -1,7 +1,6 @@
 """PyCalc is a simple calculator built with Python and PyQt."""
 
 import sys
-from functools import partial
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (
@@ -19,7 +18,7 @@ WINDOW_SIZE = 235
 DISPLAY_HEIGHT = 35
 BUTTON_SIZE = 40
 
-from Calculadora import Calculadora
+from files.Calculadora import Calculadora
 
 class PyCalcWindow(QMainWindow):
 
@@ -81,7 +80,6 @@ def evaluateExpression(expression):
         result = ERROR_MSG
     return result
 
-
 def main():
     """PyCalc's main function."""
     pycalcApp = QApplication([])
@@ -90,6 +88,3 @@ def main():
     Calculadora(model=evaluateExpression, view=pycalcWindow)
     sys.exit(pycalcApp.exec())
 
-
-if __name__ == "__main__":
-    main()
