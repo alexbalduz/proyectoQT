@@ -22,7 +22,6 @@ BUTTON_SIZE = 40
 from Calculadora import Calculadora
 
 class PyCalcWindow(QMainWindow):
-    """PyCalc's main window (GUI or view)."""
 
     def __init__(self):
         super().__init__()
